@@ -1,0 +1,140 @@
+@font-face {
+	font-family: "Figtree";
+	src: url('assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: bold;
+}
+
+@font-face {
+	font-family: "Figtree";
+	src: url('assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+:root {
+  --primary-color: hsl(47, 88%, 63%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey: hsl(0, 0%, 50%);
+  --neutral-black: hsl(0, 0%, 7%);
+  --default-margin: 5%;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: var(--primary-color);
+}
+
+a {
+	text-decoration: inherit;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+a:focus {
+	outline: 2px solid blue;
+}
+
+
+.card {
+	margin: 4vh 3vw;
+	aspect-ratio: 0.75;
+	max-height: 35rem;
+	min-width: 20vw;
+	display:flex; 
+	flex-direction: column;
+	background-color: var(--neutral-white);
+	border: var(--neutral-black) solid 1px;
+	border-radius: 15px;
+	box-shadow: 7px 7px var(--neutral-black);
+}
+
+.card-img {
+	object-fit: cover;
+	height: 48%;
+	aspect-ratio: 1.75;
+	margin: var(--default-margin);
+	position: relative;
+	border-radius: 10px;
+}
+
+.tag {
+	background-color: var(--primary-color);
+	border-radius: 5px;
+	position: relative;
+	width: 90px;
+	height: 40px;
+	margin: 0 var(--default-margin);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tag > a {
+	font: bold 14px "Figtree";
+	color: var(--neutral-black);
+}
+
+.tag > a:hover {
+	color: var(--neutral-grey);
+}
+
+.pub-date {
+	position: relative;
+	margin: 0 var(--default-margin);
+	padding-top: 15px;
+	font: 14px "Figtree";
+	color: var(--neutral-black);
+}
+
+.blog-title {
+	position: relative;
+	margin: 3vh var(--default-margin);
+}
+
+.blog-title > a {
+	font: bold 18px "Figtree";
+	color: var(--neutral-black);
+}
+
+.blog-title > a:hover {
+	color: var(--primary-color);
+}
+
+.blog-description {
+	position: relative;
+	margin: 0 var(--default-margin);
+	font: 16px "Figtree";
+	line-height: 1.5;
+	color: var(--neutral-grey);
+}
+
+.blog-author {
+	height: 15vmin;
+	position: relative;
+	margin: 0 var(--default-margin);
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+}
+
+.blog-author > .photo {
+	margin: 0;
+	height: 35px;
+	width: 35px;
+}
+
+.blog-author > .name {
+	font: bold 14px "Figtree";
+	color: var(--neutral-black);
+}
+
+.blog-author > .name:hover {
+	color: var(--neutral-grey);
+}
